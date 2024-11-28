@@ -25,7 +25,6 @@
     margin-bottom: 10px;
 }
 
-/* Ajustes responsivos */
 @media (max-width: 768px) {
     .galeria {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
@@ -39,6 +38,87 @@ a:hover {
     color: #C7005C; /* Rosa para resaltar */
     text-decoration: underline; /* Subrayado al pasar el mouse */
 }
+
+    header {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: #C7005C;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Hacer que el logo ocupe todo el ancho y los enlaces se apilen */
+    header {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav {
+        display: none;  /* Ocultar los enlaces por defecto */
+    }
+
+    nav.active {
+        display: block;  /* Mostrar los enlaces cuando se active el menú */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 2em;
+        color: #C7005C;
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.3em;
+        margin: 10px 0;
+    }
+}
+
+.hamburger {
+    display: none; /* Ocultamos el menú por defecto */
+    cursor: pointer;
+    font-size: 2em; /* Aumentamos el tamaño del ícono */
+    color: #C7005C; /* El color del ícono */
+    margin-top: 10px;
+}
+
+/* Hacemos que el menú hamburguesa se muestre en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block; /* Hacer visible el botón en pantallas pequeñas */
+    }
+}
+
+/* Estilo de las líneas del menú */
+.hamburger:before, .hamburger:after, .hamburger div {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #C7005C;
+    margin: 6px auto; /* Espaciado entre las líneas */
+    transition: all 0.3s;
+}
+
+    
     </style>
     
 </head>
